@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Light ON/OFF</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="flex flex-col items-center justify-center bg-black h-screen">
+        <!-- Bulb Image -->
+        <img class="h-56" id="bulbImg" src="https://ik.imagekit.io/frr8txkzi/MERN%20Stack/Cat%20Project/bulb-go-on-img.webp" alt="Bulb-on">
+        <!-- Cat Image  -->
+        <img class="h-56" id="catImg" src="https://ik.imagekit.io/frr8txkzi/MERN%20Stack/Cat%20Project/cat-img.webp" alt="Cat-img">
+        <!-- Buttons  -->
+         <div class="flex gap-5 mt-6 gap-x-14">
+             <button onclick="on()" class="bg-white text-lg px-6 py-2 rounded-lg font-semibold hover:bg-gray-200">ON</button>
+             <button onclick="off()" class="bg-white text-lg px-6 py-2 rounded-lg font-semibold hover:bg-gray-200">OFF</button>
+         </div>
+    </div>
+    
+     <script>
+        var bulb = document.getElementById("bulbImg");
+        var cat = document.getElementById("catImg");
+
+        function on() {
+            bulb.src = "https://ik.imagekit.io/frr8txkzi/MERN%20Stack/Cat%20Project/bulb-go-on-img.webp";
+            cat.src = "https://ik.imagekit.io/frr8txkzi/MERN%20Stack/Cat%20Project/cat-img.webp";
+        }
+        function off() {
+            bulb.src = "https://ik.imagekit.io/frr8txkzi/MERN%20Stack/Cat%20Project/bulb-go-off-img.webp";
+            cat.src = "https://ik.imagekit.io/frr8txkzi/MERN%20Stack/Cat%20Project/cat-eyes.webp";
+        }
+    </script>
+</body>
+</html>
