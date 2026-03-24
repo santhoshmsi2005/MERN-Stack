@@ -13,41 +13,37 @@
         <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-1 py-5">
             <div class="flex justify-between items-center">
                 <div>
-                    <h1 class="text-3xl font-semibold">My Portfolio</h1>
+                    <h1 class="text-3xl font-semibold cursor-pointer" id="lightON">My Portfolio</h1>
                     <p class="text-lg">Santhosh</p>
                 </div>
                 <div class="rounded-full hover:shadow-xl hover:-translate-y-2 hover:bg-yellow-300 hover:shadow-yellow-300 hover:scale-150 ease-in-out duration-300 ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                    <svg id="lightOFF" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
                     class="lucide lucide-lightbulb-icon lucide-lightbulb hover:cursor-pointer hover:fill-yellow-500 bg"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
                 </div>
             </div>
         </div>
-        <!-- navbar for laptop starting -->
+        <!-- navbar for starting -->
         <nav>
-            <div class="w-[90%] lg:w-[56%] mx-auto md:grid grid-cols-1 py-5 hidden hover:-translate-y-2 ease-in-out duration-200 hover:scale-110">
-                <div class="flex justify-around items-center shadow-lg hover:shadow-xl rounded-full p-5">
-                    <ul><li><a href="../index.html">Home</a></li></ul>
-                    <ul><li><a href="./About.html">About</a></li></ul>
-                    <ul><li><a href="./Project.html">Projects</a></li></ul>
-                    <ul><li><a href="./Resume.html">Resume</a></li></ul>
-                    <ul><li><a href="./Tools.html">Tools</a></li></ul>
-                    <ul><li><a href="./Ama.html">Ama</a></li></ul>
+            <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-1 py-5">
+                <div class="flex justify-end">
+                    <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                    class="lucide lucide-menu-icon lucide-menu lg:hidden cursor-pointer"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+                    <svg id="crossIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                    class="lucide lucide-x-icon lucide-x hidden cursor-pointer"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                 </div>
-            </div>
-            <!-- navbar for laptop ending -->
-            <!-- navbar for mobile starting -->
-            <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-1 py-5 md:hidden fixed bottom-3 left-6">
-                <div class="flex justify-around items-center shadow-xl rounded-full p-5">
-                    <ul><li><a href="../index.html">Home</a></li></ul>
-                    <ul><li><a href="./About.html">About</a></li></ul>
-                    <ul><li><a href="./Project.html">Projects</a></li></ul>
-                    <ul><li><a href="./Resume.html">Resume</a></li></ul>
-                    <ul><li><a href="./Tools.html">Tools</a></li></ul>
-                    <ul><li><a href="./Ama.html">Ama</a></li></ul>
+                <div id="navItem" class="hidden lg:block">
+                    <ul class="flex flex-col items-center justify-center gap-y-6 shadow-lg rounded-lg py-5 font-semibold text-base lg:flex-row lg:justify-around lg:rounded-full lg:hover:scale-110 transition lg:duration-200 lg:p-5 ">
+                        <li class="hover:-translate-y-1 hover:text-blue-500 hover:underline-offset-4 hover:underline duration-200"> <a href="../index.html">Home</a></li>
+                        <li class="hover:-translate-y-1 hover:text-blue-500 hover:underline-offset-4 hover:underline duration-200"> <a href="./About2.html">About</a></li>
+                        <li class="hover:-translate-y-1 hover:text-blue-500 hover:underline-offset-4 hover:underline duration-200"> <a href="./Project.html">Project</a></li>
+                        <li class="hover:-translate-y-1 hover:text-blue-500 hover:underline-offset-4 hover:underline duration-200"> <a href="./Resume.html">Resume</a></li>
+                        <li class="hover:-translate-y-1 hover:text-blue-500 hover:underline-offset-4 hover:underline duration-200"> <a href="./Tools.html">Tools</a></li>
+                        <li class="hover:-translate-y-1 hover:text-blue-500 hover:underline-offset-4 hover:underline duration-200"> <a href="./Ama.html">Ama</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
-        <!-- navbar for mobile ending -->
+        <!-- navbar for ending -->
 
         <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-2 py-5">
             <div class="flex flex-col justify-center items-center gap-2 shadow-lg p-5 rounded-lg hover:scale-110 hover:-translate-y-3 duration-200 ease-in-out">
@@ -73,4 +69,27 @@
         </div>
     </div>
 </body>
+<script>
+
+    let menuIcon = document.getElementById("menuIcon")
+    let crossIcon = document.getElementById("crossIcon")
+    let navItem = document.getElementById("navItem")
+    let lightON = document.getElementById("lightON")
+    let lightOFF = document.getElementById("lightOFF")
+    let totalBody = document.getElementById("totalBody")
+    let navBarShadow = document.getElementById("navBarShadow")
+
+    menuIcon.addEventListener("click" , () => {
+        crossIcon.classList.remove("hidden")
+        menuIcon.classList.add("hidden")
+        navItem.classList.remove("hidden")
+    })
+
+    crossIcon.addEventListener("click" , () => {
+        navItem.classList.add("hidden")
+        menuIcon.classList.remove("hidden")
+        crossIcon.classList.add("hidden")
+    })
+
+</script>
 </html>

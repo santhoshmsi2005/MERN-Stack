@@ -14,11 +14,11 @@
         <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-1 py-5">
             <div class="flex justify-between items-center">
                 <div>
-                    <h1 class="text-3xl font-semibold">My Portfolio</h1>
+                    <h1 class="text-3xl font-semibold cursor-pointer" id="lightON">My Portfolio</h1>
                     <p class="text-lg">Santhosh</p>
                 </div>
                 <div class="rounded-full hover:shadow-xl hover:-translate-y-2 hover:bg-yellow-300 hover:shadow-yellow-300 hover:scale-150 ease-in-out duration-300 ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                    <svg id="lightOFF" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
                     class="lucide lucide-lightbulb-icon lucide-lightbulb hover:cursor-pointer hover:fill-yellow-500 bg"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
                 </div>
             </div>
@@ -28,7 +28,7 @@
         </div>
         <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-1 py-5">
             <div class="flex flex-col gap-7">
-                <a href="./Pages/About.html">
+                <a href="./Pages/About2.html">
                     <div class="flex justify-between items-center group">
                         <p class="text-2xl group-hover:translate-y-2">About</p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
@@ -56,6 +56,13 @@
                         class="lucide lucide-move-right-icon lucide-move-right group-hover:-translate-y-2"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
                     </div>
                 </a>
+                <a href="./Pages/Tools.html">
+                    <div class="flex justify-between items-center group">
+                        <p class="text-2xl group-hover:translate-y-2">Ama</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                        class="lucide lucide-move-right-icon lucide-move-right group-hover:-translate-y-2"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-1 py-5">
@@ -71,4 +78,27 @@
     </div>
 
 </body>
+<script>
+
+    let menuIcon = document.getElementById("menuIcon")
+    let crossIcon = document.getElementById("crossIcon")
+    let navItem = document.getElementById("navItem")
+    let lightON = document.getElementById("lightON")
+    let lightOFF = document.getElementById("lightOFF")
+    let totalBody = document.getElementById("totalBody")
+    let navBarShadow = document.getElementById("navBarShadow")
+
+    menuIcon.addEventListener("click" , () => {
+        crossIcon.classList.remove("hidden")
+        menuIcon.classList.add("hidden")
+        navItem.classList.remove("hidden")
+    })
+
+    crossIcon.addEventListener("click" , () => {
+        navItem.classList.add("hidden")
+        menuIcon.classList.remove("hidden")
+        crossIcon.classList.add("hidden")
+    })
+
+</script>
 </html>
