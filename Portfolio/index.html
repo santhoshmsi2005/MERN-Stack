@@ -9,69 +9,75 @@
     <link rel="stylesheet" href="./asserts/Fonts/WEB/css/satoshi.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-text text-gradient">LOADING...</div>
+    </div>
     
     <div class="max-w-[100%]">
-        <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-1 py-5">
+        <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-1 py-8 animate-load">
             <div class="flex justify-between items-center">
                 <div>
-                    <h1 class="text-3xl font-semibold cursor-pointer" id="lightON">My Portfolio</h1>
-                    <p class="text-lg">Santhosh</p>
+                    <h1 class="text-5xl font-bold cursor-pointer text-gradient pb-2 drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]" id="lightON">My Portfolio</h1>
+                    <p class="text-xl text-slate-400 font-medium tracking-wide mt-1">Santhosh</p>
                 </div>
-                <div class="rounded-full hover:shadow-xl hover:-translate-y-2 hover:bg-yellow-300 hover:shadow-yellow-300 hover:scale-150 ease-in-out duration-300 ">
-                    <svg id="lightOFF" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-                    class="lucide lucide-lightbulb-icon lucide-lightbulb hover:cursor-pointer hover:fill-yellow-500 bg"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                <div class="rounded-full hover:shadow-xl hover:-translate-y-2 hover:bg-yellow-300 hover:shadow-yellow-300 ease-in-out duration-300 animate-float p-4 bg-slate-800 border border-slate-700">
+                    <svg id="lightOFF" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                    class="lucide lucide-lightbulb-icon lucide-lightbulb hover:cursor-pointer hover:fill-yellow-500 text-slate-300 hover:text-slate-900 transition-colors"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
                 </div>
             </div>
         </div>
-        <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-1 py-5">
-            <h2 class="text-4xl leading-normal">Hi, I am Sandy, Web Developer and Designer, and also Gamer.</h2>
+        <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-1 py-10 scroll-hidden">
+            <h2 id="typing-text" class="text-5xl leading-tight font-medium text-slate-200 drop-shadow-xl min-h-[120px]">
+                <!-- Typing effect text goes here -->
+            </h2>
         </div>
-        <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-1 py-5">
-            <div class="flex flex-col gap-7">
-                <a href="./Pages/About2.html">
-                    <div class="flex justify-between items-center group">
-                        <p class="text-2xl group-hover:translate-y-2">About</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-                        class="lucide lucide-move-right-icon lucide-move-right group-hover:-translate-y-2"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
+        <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-1 py-8">
+            <div class="flex flex-col gap-6">
+                <a href="./Pages/About2.html" class="scroll-hidden delay-100">
+                    <div class="flex justify-between items-center group glass-panel rounded-2xl p-6">
+                        <p class="text-2xl font-medium text-slate-300 group-hover:text-indigo-400 transition-colors">About</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                        class="lucide lucide-move-right-icon lucide-move-right text-slate-400 group-hover:text-indigo-400 group-hover:translate-x-2 transition-all"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
                     </div>
                 </a>
-                <a href="./Pages/Project.html">
-                    <div class="flex justify-between items-center group">
-                        <p class="text-2xl group-hover:translate-y-2">Project</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-                        class="lucide lucide-move-right-icon lucide-move-right group-hover:-translate-y-2"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
+                <a href="./Pages/Project.html" class="scroll-hidden delay-200">
+                    <div class="flex justify-between items-center group glass-panel rounded-2xl p-6">
+                        <p class="text-2xl font-medium text-slate-300 group-hover:text-indigo-400 transition-colors">Project</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                        class="lucide lucide-move-right-icon lucide-move-right text-slate-400 group-hover:text-indigo-400 group-hover:translate-x-2 transition-all"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
                     </div>
                 </a>
-                <a href="./Pages/Resume.html">
-                    <div class="flex justify-between items-center group">
-                        <p class="text-2xl group-hover:translate-y-2">Resume</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-                        class="lucide lucide-move-right-icon lucide-move-right group-hover:-translate-y-2"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
+                <a href="./Pages/Resume.html" class="scroll-hidden delay-300">
+                    <div class="flex justify-between items-center group glass-panel rounded-2xl p-6">
+                        <p class="text-2xl font-medium text-slate-300 group-hover:text-indigo-400 transition-colors">Resume</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                        class="lucide lucide-move-right-icon lucide-move-right text-slate-400 group-hover:text-indigo-400 group-hover:translate-x-2 transition-all"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
                     </div>
                 </a>
-                <a href="./Pages/Tools.html">
-                    <div class="flex justify-between items-center group">
-                        <p class="text-2xl group-hover:translate-y-2">Tools</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-                        class="lucide lucide-move-right-icon lucide-move-right group-hover:-translate-y-2"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
+                <a href="./Pages/Tools.html" class="scroll-hidden delay-400">
+                    <div class="flex justify-between items-center group glass-panel rounded-2xl p-6">
+                        <p class="text-2xl font-medium text-slate-300 group-hover:text-indigo-400 transition-colors">Tools</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                        class="lucide lucide-move-right-icon lucide-move-right text-slate-400 group-hover:text-indigo-400 group-hover:translate-x-2 transition-all"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
                     </div>
                 </a>
-                <a href="./Pages/Tools.html">
-                    <div class="flex justify-between items-center group">
-                        <p class="text-2xl group-hover:translate-y-2">Ama</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-                        class="lucide lucide-move-right-icon lucide-move-right group-hover:-translate-y-2"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
+                <a href="./Pages/Tools.html" class="scroll-hidden" style="animation-delay: 500ms;">
+                    <div class="flex justify-between items-center group glass-panel rounded-2xl p-6">
+                        <p class="text-2xl font-medium text-slate-300 group-hover:text-indigo-400 transition-colors">Ama</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                        class="lucide lucide-move-right-icon lucide-move-right text-slate-400 group-hover:text-indigo-400 group-hover:translate-x-2 transition-all"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
                     </div>
                 </a>
             </div>
         </div>
-        <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-1 py-5">
-            <div class="flex justify-between items-center">
-                <p class="text-xs">© 2026 by Santhosh. All rights reserved.</p>
-                <div class="flex gap-x-5 items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github hover:fill-blue-700 hover:-translate-y-3 duration-200 hover:scale-125 hover:origin-top-left hover:rotate-12"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter hover:fill-sky-500 hover:-translate-y-3 duration-200 hover:scale-125 hover:origin-top-left hover:rotate-12"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin hover:fill-blue-600 hover:-translate-y-3 duration-200 hover:scale-125 hover:origin-top-left hover:rotate-12"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        <div class="w-[90%] lg:w-[56%] mx-auto grid grid-cols-1 py-12 scroll-hidden" style="animation-delay: 600ms;">
+            <div class="flex justify-between items-center border-t border-slate-800 pt-8">
+                <p class="text-sm text-slate-400">© 2026 by Santhosh. All rights reserved.</p>
+                <div class="flex gap-x-6 items-center text-slate-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github hover:text-white hover:-translate-y-2 duration-300 transition-all cursor-pointer"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter hover:text-sky-400 hover:-translate-y-2 duration-300 transition-all cursor-pointer"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin hover:text-blue-500 hover:-translate-y-2 duration-300 transition-all cursor-pointer"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                 </div>
             </div>
         </div>
@@ -88,17 +94,98 @@
     let totalBody = document.getElementById("totalBody")
     let navBarShadow = document.getElementById("navBarShadow")
 
-    menuIcon.addEventListener("click" , () => {
-        crossIcon.classList.remove("hidden")
-        menuIcon.classList.add("hidden")
-        navItem.classList.remove("hidden")
-    })
+    if(menuIcon && crossIcon && navItem) {
+        menuIcon.addEventListener("click" , () => {
+            crossIcon.classList.remove("hidden")
+            menuIcon.classList.add("hidden")
+            navItem.classList.remove("hidden")
+        })
 
-    crossIcon.addEventListener("click" , () => {
-        navItem.classList.add("hidden")
-        menuIcon.classList.remove("hidden")
-        crossIcon.classList.add("hidden")
-    })
+        crossIcon.addEventListener("click" , () => {
+            navItem.classList.add("hidden")
+            menuIcon.classList.remove("hidden")
+            crossIcon.classList.add("hidden")
+        })
+    }
+
+    // Scroll Animation Logic
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('scroll-show');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-hidden').forEach((element) => {
+        observer.observe(element);
+    });
+
+    // Remove Loader on Window Load
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('loading-screen');
+        if (loader) {
+            setTimeout(() => {
+                loader.classList.add('hidden-loader');
+                setTimeout(startTypingEffect, 800);
+            }, 800); // 800ms minimum display time for the loader
+        } else {
+            startTypingEffect();
+        }
+    });
+
+    function startTypingEffect() {
+        const typingText = document.getElementById("typing-text");
+        if (!typingText) return;
+
+        const parts = [
+            { text: "Hi, I am ", class: "" },
+            { text: "Sandy", class: "text-gradient font-bold drop-shadow-[0_0_15px_rgba(129,140,248,0.5)]" },
+            { text: ", Web Developer, Designer, and Gamer.", class: "" }
+        ];
+        
+        let partIndex = 0;
+        let charIndex = 0;
+        typingText.innerHTML = '';
+        
+        function type() {
+            if (partIndex < parts.length) {
+                let currentPart = parts[partIndex];
+                
+                let spanId = "type-part-" + partIndex;
+                let spanElement = document.getElementById(spanId);
+                
+                if (!spanElement) {
+                    spanElement = document.createElement('span');
+                    spanElement.id = spanId;
+                    if (currentPart.class) spanElement.className = currentPart.class;
+                    typingText.appendChild(spanElement);
+                }
+                
+                if (charIndex < currentPart.text.length) {
+                    spanElement.innerHTML += currentPart.text.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, 50); // Speed of typing
+                } else {
+                    partIndex++;
+                    charIndex = 0;
+                    setTimeout(type, 50);
+                }
+            } else {
+                // Done typing, add blinking cursor
+                typingText.innerHTML += '<span class="animate-pulse">|</span>';
+            }
+        }
+        
+        type();
+    }
 
 </script>
 </html>

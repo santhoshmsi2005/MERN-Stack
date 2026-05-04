@@ -1,5 +1,141 @@
 *{
-    font-family: "Satoshi-Regular";
-    /* color: white;
-    background-color: black; */
+    font-family: "Satoshi-Regular", sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* Slate 900 */
+    color: #e2e8f0; /* Slate 200 */
+    overflow-x: hidden;
+}
+
+/* Load Animation */
+.animate-load {
+    opacity: 0;
+    animation: fade-in-up 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+
+/* Scroll Animation Classes */
+.scroll-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.scroll-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Float Animation */
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Gradient text */
+.text-gradient {
+    background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Premium glass effect for list items */
+.glass-panel {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(56, 189, 248, 0.2);
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(56, 189, 248, 0.1);
+    transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+    background: rgba(30, 41, 59, 0.8);
+    transform: translateY(-4px);
+    animation: electricPulse 1.5s infinite;
+    z-index: 10;
+}
+
+@keyframes electricPulse {
+    0%, 100% {
+        border-color: #38bdf8;
+        box-shadow: 0 0 12px #38bdf8, inset 0 0 10px #38bdf8;
+    }
+    33% {
+        border-color: #818cf8;
+        box-shadow: 0 0 25px #818cf8, inset 0 0 15px #818cf8;
+    }
+    66% {
+        border-color: #c084fc;
+        box-shadow: 0 0 15px #c084fc, inset 0 0 12px #c084fc;
+    }
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0f172a;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+}
+
+#loading-screen.hidden-loader {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-text {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Infinite Marquee Animation */
+.animate-marquee {
+    animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
